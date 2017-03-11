@@ -19,8 +19,8 @@
         <div class="panel panel-default">
             <div class="panel-heading">Register</div>
             <div class="panel-body">
-                <form name="register">
-                    <div ng-show="register.pwdConfirm.$dirty && register.pwdConfirm.$invalid" class="alert alert-danger" role="alert"> <strong>Oh snap!</strong> password don not match </div>
+                <form name="register" ng-submit="auth.register()">
+                    <div ng-show="register.pwdConfirm.$dirty && register.pwdConfirm.$invalid" class="alert alert-danger" role="alert"> <strong>Oh snap !</strong> password don not match </div>
                     <div class="form-group">
                         <label>Email address</label>
                         <input type="email" class="form-control"> </div>
