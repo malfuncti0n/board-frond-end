@@ -3,6 +3,7 @@ export class AuthController {
         'ngInject';
         this.$auth = $auth;
     }
+    //register function satelizer
     register() {
         //vm is view model
         var vm = this;
@@ -10,4 +11,14 @@ export class AuthController {
             vm.$auth.setToken(token);
         });
     }
+    //login function satelizer
+
+        login() {
+        //vm is view model
+        var vm = this;
+        this.$auth.login(this.login.user).then(function (token) {
+            vm.$auth.setToken(token);
+        });
+    }
+
 }
